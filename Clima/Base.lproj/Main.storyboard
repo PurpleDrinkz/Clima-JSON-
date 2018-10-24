@@ -18,25 +18,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ciudad Obregón" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sut-zN-3Rd">
-                                <rect key="frame" x="16" y="20" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOLAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sut-zN-3Rd">
+                                <rect key="frame" x="68.5" y="33" width="238" height="81.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="68"/>
+                                <color key="textColor" red="0.24705882352941178" green="0.83137254901960789" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3W-Ig-KTz">
-                                <rect key="frame" x="16" y="49" width="126" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0º" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3W-Ig-KTz">
+                                <rect key="frame" x="159.5" y="122" width="57.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.4898932161415086" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cow-Py-DdM">
+                                <rect key="frame" x="106" y="565" width="161" height="61"/>
+                                <color key="backgroundColor" red="0.19592432852932318" green="0.83310473252159578" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" red="1" green="0.97538797678738842" blue="0.98080361462039323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doTapActualizarClima:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BIa-AY-kwc"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lCK-iT-hZB">
+                                <rect key="frame" x="178" y="538" width="20" height="20"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Btz-Iu-830">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hIE-VX-gUn">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                <subviews>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cG9-9D-bOb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sut-zN-3Rd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8hC-70-tap"/>
+                            <constraint firstItem="sut-zN-3Rd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="Fd1-lJ-gkb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cow-Py-DdM" secondAttribute="trailing" constant="108" id="Fir-SV-CFY"/>
+                            <constraint firstItem="Cow-Py-DdM" firstAttribute="top" secondItem="lCK-iT-hZB" secondAttribute="bottom" constant="7" id="IXp-bf-5SB"/>
+                            <constraint firstItem="e3W-Ig-KTz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NKK-Vw-uty"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cow-Py-DdM" secondAttribute="bottom" constant="41" id="hHQ-dw-iWp"/>
+                            <constraint firstItem="lCK-iT-hZB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iDH-XH-m5b"/>
+                            <constraint firstItem="Cow-Py-DdM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="lih-d8-vkn"/>
+                            <constraint firstItem="e3W-Ig-KTz" firstAttribute="top" secondItem="sut-zN-3Rd" secondAttribute="bottom" constant="8" id="x5Q-of-qg7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="aiCargarClima" destination="cG9-9D-bOb" id="wMS-jD-BQ9"/>
+                        <outlet property="doTapActualizarClima" destination="Cow-Py-DdM" id="Lnz-bq-Vpr"/>
                         <outlet property="lblGrados" destination="e3W-Ig-KTz" id="bKE-A5-UvI"/>
                     </connections>
                 </viewController>
